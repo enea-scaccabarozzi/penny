@@ -46,6 +46,6 @@ jobs:
         shell: bash
         run: |
           git tag -f last-release
-          git push origin last-release --force --no-verify
+          git push --force --no-verify
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
