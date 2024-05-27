@@ -29,7 +29,8 @@
 		"version": {
 			"executor": "@jscutlery/semver:version",
 			"options": {
-				"preset": "conventionalcommits"
+				"preset": "conventionalcommits",
+				"noVerify": true
 			}
 		}
 	}
