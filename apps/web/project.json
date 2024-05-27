@@ -1,0 +1,36 @@
+{
+	"name": "web",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "apps/web",
+	"projectType": "application",
+	"tags": ["type:app", "scope:web"],
+	"targets": {
+		"dev": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "sst dev next dev",
+				"cwd": "apps/web"
+			}
+		},
+		"build": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "open-next build",
+				"cwd": "apps/web"
+			}
+		},
+		"build:analyze": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "ANALYZE=true open-next build",
+				"cwd": "apps/web"
+			}
+		},
+		"version": {
+			"executor": "@jscutlery/semver:version",
+			"options": {
+				"preset": "conventionalcommits"
+			}
+		}
+	}
+}
