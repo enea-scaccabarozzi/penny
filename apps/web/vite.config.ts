@@ -27,5 +27,6 @@ export default defineConfig({
 			reportsDirectory: '../../coverage/apps/web',
 			provider: 'v8',
 		},
+    watch: process.env.CI !== 'true',
 	},
 })

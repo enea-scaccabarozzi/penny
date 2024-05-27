@@ -3,5 +3,5 @@
 
 pnpm nx run-many --target=lint --all;
 pnpm nx run-many --target=build --all;
-pnpm nx run-many --target=test --all;
+CI="true" pnpm nx run-many --target=test --all;
 pnpm nx run-many --target=e2e --all;
