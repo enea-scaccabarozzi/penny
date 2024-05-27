@@ -16,6 +16,5 @@
 		"baseUrl": ".",
 		"paths": {}
 	},
-	"files": ["./.sst/types.generated.ts"],
 	"exclude": ["node_modules", "tmp"]
 }

@@ -38,7 +38,7 @@ jobs:
 
       - name: Version
         shell: bash
-        run: pnpm nx affected --base=last-release --target=version
+        run: CI="true" pnpm nx affected --base=last-release --target=version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -46,6 +46,6 @@ jobs:
         shell: bash
         run: |
           git tag -f last-release
-          git push origin last-release --force
+          CI="true" git push origin last-release --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
