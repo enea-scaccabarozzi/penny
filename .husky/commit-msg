@@ -1,4 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+# If CI env var is set to "true", we don't want to run the commitlint CLI
+if [ "$CI" = "true" ]; then
+    exit 0
+fi
 pnpm commitlint --edit "$1"
